@@ -1,4 +1,7 @@
 /* ini css */ 
+.body {
+    background-color: beige;
+}
 
 .main-header {
     display: flex;
@@ -6,15 +9,22 @@
     align-items: center;
 }
 
+.inline {
+    display: inline;
+}
+
 nav {
     display: flex;
+    font-family: ui-sans-serif;
+    gap: 10px;
 }
 
 nav>a {
-    border: 1px solid;
-    padding: 8px;
-    color: black;
+    border: 1px solid black; 
+    padding: 5px;
     text-decoration: none;
+    display: inline-block;
+    border-radius: 8px;
 }
 
 .logo-icon {
@@ -27,17 +37,36 @@ nav>a {
 }
 
 .photo-banner {
-    border: 1px solid;
-    background-image: url(../assets/logo.png);
     background-position: center;
     background-size: cover;
     height: 480px;
 }
 
-.profile-icon {
-    height: 50px;
-    width: 50px;
-    background-image: url(../assets/logo.png);
+.photo-1 {
+    background-image: url(../assets/1.jpeg);
+}
+
+.photo-2 {
+    background-image: url(../assets/2.jpeg); 
+}
+
+.photo-3 {
+    background-image: url(../assets/3.jpeg);
+}
+
+.profile-icon1 {
+    height: 100px;
+    width: 100px;
+    background-image: url(../assets/idol1.jpeg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50px;
+}
+
+.profile-icon2 {
+    height: 100px;
+    width: 100px;
+    background-image: url(../assets/idol2.jpeg);
     background-size: cover;
     background-position: center;
     border-radius: 50px;
@@ -52,4 +81,86 @@ nav>a {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.form-container {
+    display: flex; /* Membuat form dan hasil form sejajar horizontal */
+    justify-content: space-between; /* Menyediakan ruang antara form dan hasil */
+    align-items: flex-start; /* Memastikan item disejajarkan di atas */
+    padding: 20px;
+    gap: 20px; /* Memberikan jarak antara form dan hasil */
+    width: 100%; /* Lebar penuh untuk container */
+}
+  
+.form-input,
+.form-output {
+    width: 42%; /* Mengatur agar form dan hasil form memiliki lebar hampir setengah */
+    max-width: 500px;
+}
+  
+form {
+    display: flex;
+    flex-direction: column; /* Elemen form dalam satu kolom */
+}
+  
+input[type="text"],
+input[type="date"],
+textarea {
+    width: 100%; /* Elemen input dan textarea mengisi lebar penuh form */
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+  
+input[type="radio"] {
+    margin-left: 10px;
+}
+  
+textarea {
+    height: 100px; /* Ukuran tinggi textarea */
+}
+  
+label {
+    margin-top: 10px;
+}
+  
+input[type="submit"] {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+  
+.form-output {
+    border-left: 2px solid #ccc;
+    padding-left: 20px; /* Jarak antara border kiri dan konten */
+    max-height: 300px;
+    overflow-y: auto;
+}
+  
+.form-output p {
+    margin-bottom: 15px;
+}
+  
+/* Sejajarkan Radio Button */
+.gender-radio {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Beri jarak antara radio button dan label */
+}
+
+/* max-width akan menerapkan style di bawah ukuran yang ditentukan
+min-width akan menerapkan style di atas ukuran yang ditentukan */
+@media only screen and (max-width: 375px) {
+    .main-header {
+        flex-direction: column;
+    }
 }
